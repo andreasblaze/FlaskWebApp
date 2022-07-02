@@ -1,7 +1,6 @@
 FROM amazonlinux
 
 RUN yum -y update
-RUN yum -y install git
 RUN yum -y install httpd
 
 CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
@@ -14,12 +13,10 @@ LABEL MAINTAINER="Andrey Bondariev"
 LABEL EMAIL="andreybond13@gmail.com"
 LABEL NAME="Flask Web Application"
 
-RUN git clone https://github.com/andreasblaze/FlaskWebApp.git > /var/www/
-
 WORKDIR /
 RUN pip install -r requirements.txt
 
-COPY . /var/www/FlaskWebApp
+COPY . main.py
 
 EXPOSE 80
 ENTRYPOINT [ "python3" ]
