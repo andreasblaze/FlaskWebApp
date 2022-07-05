@@ -1,23 +1,16 @@
-# Flask Web App
+# Flask Web App | Docker | AWS
 
-## Setup & Installtion
-
-Make sure you have the latest version of Python installed.
+## Setup work directory
 
 ```bash
 git clone <repo-url>
 ```
 
-```bash
-pip install -r requirements.txt
-```
+## Installtion & Running The App
 
-## Running The App
-
-```bash
-python main.py
-```
+App running in Docker container on the Amazon Linux 2 server. 
+All details you can view in Dockerfile.
 
 ## Viewing The App
-
-Go to `http://localhost:5000`
+Exposed and working http port 80. 
+Go to `http://13.53.171.26`
