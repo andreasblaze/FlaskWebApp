@@ -1,9 +1,9 @@
-FROM python:3.9.7-alpine3.14
+FROM python:buster 
 ENV PYTHONUNBUFFERED 1
 
 LABEL VERSION="1.0.0"
-LABEL MAINTAINER="Andrey Bondariev"
-LABEL EMAIL="andreybond13@gmail.com"
+LABEL MAINTAINER="Andrii Bondariev"
+LABEL EMAIL="andrii.bondariev@nure.ua"
 LABEL NAME="Flask Web Application"
 
 WORKDIR /FlaskWebApp
@@ -15,6 +15,6 @@ RUN pip install -r requirements.txt
 
 COPY ./app ./app
 
-EXPOSE 80
+EXPOSE 5000
 
-CMD [ "python3", "./main.py" ]
+ENTRYPOINT [ "python", "main.py" ]
