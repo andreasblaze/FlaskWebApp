@@ -1,5 +1,5 @@
 pipeline {
-    
+
     agent { dockerfile true }
 
     stages {
@@ -9,7 +9,7 @@ pipeline {
                 git branch: 'main', credentialsId: 'ssh_flask-app', url: 'git@github.com:andreasblaze/FlaskWebApp.git'
             }
         }
-        
+        /*
         stage('Build Docker Image') {
             steps{
                     sh 'docker build -t flask-web-app .'
@@ -29,7 +29,7 @@ pipeline {
                     sh 'docker image prune -a'
                 }
             }
-
+        */
 
         /*
          stage('Push docker image to DockerHub') {
