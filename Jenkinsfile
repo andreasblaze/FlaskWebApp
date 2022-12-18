@@ -5,7 +5,7 @@ pipeline {
 
         stage('Git Checkout'){
             steps{
-                git credentialsId: 'ssh_flask-app', url: 'git@github.com:andreasblaze/FlaskWebApp.git'
+                git branch: 'main', credentialsId: 'ssh_flask-app', url: 'git@github.com:andreasblaze/FlaskWebApp.git'
             }
         }
         
