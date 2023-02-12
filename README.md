@@ -13,4 +13,4 @@ All details you can view in Dockerfile.
 
 ## Viewing The App
 Exposed and working http port 80. 
-Go to `http://13.53.171.26`
+Go to `http://localhost`
